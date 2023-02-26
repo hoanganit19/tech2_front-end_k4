@@ -169,3 +169,26 @@ Lưu ý:
 
 - Chọn tất cả thành phần: `*`
 - Chọn theo thuộc tính: tenthe[tenthuoctinh]
+
+### Pseudo-elements
+
+- before
+- after
+- first-letter
+- first-line
+- selection
+- placeholder
+
+### Pseudo Class
+
+- hover
+- active
+- focus
+- checked
+- disabled
+- first-child
+- last-child
+- first-of-type
+- last-of-type
+- nth-child
+- nth-of-type
