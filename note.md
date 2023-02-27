@@ -181,14 +181,130 @@ Lưu ý:
 
 ### Pseudo Class
 
-- hover
-- active
-- focus
-- checked
-- disabled
+- hover => Trỏ chuột
+- active => Click chuột và giữ
+- focus => Con trỏ làm việc của trình duyệt
+- checked => Trạng thái checked của input radio và input checkbox
+- disabled => Trạng thái disabled các field
 - first-child
 - last-child
-- first-of-type
-- last-of-type
-- nth-child
-- nth-of-type
+
+=> Lưu ý:
+
+- Các item phải nằm trong 1 cha và ngang hàng với nhau
+- Các item phải có selector giống nhau (Nếu bị xen ngang 1 selector khác => Sai)
+
+* first-of-type
+* last-of-type
+* nth-child
+* nth-of-type
+
+### Thuộc tính định dạng text
+
+1. Đơn vị:
+
+- Đơn vị tuyệt đối
+
+* px => pixels
+* pt => points = 1.3 x px
+
+- Đơn vị tương đối
+
+* em => Tỷ lệ với thành phần cha gần nhất
+* rem => Tỷ lệ với thành phần cao nhất (html selector)
+* % => Tỷ lệ với thành phần cha gần nhất
+* vh (viewport height) => Tỷ lệ theo chiều cao của viewport (Áp dụng với thuộc tính width, height)
+* vw (viewport width) => Tỷ lệ theo chiều rộng của viewport (Áp dụng với thuộc tính width, height)
+
+2. Giá trị mặc định
+
+- inhertit => kế thừa theo thành phần cha gần nhất
+- initial => Kế thừa theo mặc định trình duyệt
+- unset => Loại bỏ giá trị của thuộc tính (Kế thừa theo thành phần cha gần nhất)
+
+3. Màu sắc:
+
+- Tên màu tiếng anh: blue, green, yellow,....
+- Mã màu hexa: #efefef, #000000, #ffffff
+- rgb
+- hls
+- color opacity: Độ mờ của màu sắc
+
+4. Thuộc tính color:
+
+- color: gia_tri_mau
+- Thay đổi màu văn bản
+
+5. Thuộc tính font-size
+
+- font-size: value + unit
+- Thay đổi cỡ chữ của văn bản
+
+6. Thuộc tính font-family
+
+- font-family: ten_font1, ten_font2,...
+- Thay đổi font chữ của văn bản
+
+Lưu ý:
+
+- Nếu với các font chữ không có sẵn (Không phải các font mặc định của máy tính) thì cần phải nạp font vào trang web
+- 2 font chữ mặc định: san-serif, serif
+- Nếu font có chứa khoảng trắng => Đặt tên font vào trong dấu nháy kép
+
+7. Thuộc tính font-weight
+
+- font-weight: normal|bold|100|200|300|400|500|600|700|800|900
+- Thay đổi độ đậm nhạt của chữ
+
+8. Thuộc tính font-style
+
+- font-style: normal|italic
+- Thay đổi kiểu nghiêng của văn bản
+
+9. Thuộc tính text-decoration
+
+- text-decoration: none|underline|overline|line-through
+- Thêm gạch ngang cho text
+
+10. Thuộc tính text-transform
+
+- text-transform: none|capitalize|lowercase|uppercase
+- Thay đổi kiểu chữ: thường, hoa,...
+
+11. Thuộc tính text-indent
+
+- text-indent: value
+- Thụt đầu dòng
+
+12. Thuộc tính text-align
+
+- text-align: left|center|right|justify
+- Căn chỉnh vị trí text và các thẻ inline
+
+13. letter-spacing
+
+- letter-spacing: value
+- Căn chỉnh khoảng cách giữa các ký tự
+
+14. word-spacing
+
+- word-spacing: value
+- Căn chỉnh khoảng cách giữa các chữ
+
+15. Thuộc tính word-wrap
+
+- word-wrap: break-word
+- Ngắn chữ để xuống dòng
+
+### Thuộc tính background
+
+- Thay đổi màu sắc, hình nền của 1 element
+- Thuộc tính background sẽ có các thuộc tính mở rộng sau:
+
+* background-color => Màu nền
+* background-image => Hình nền
+* background-position => Vị trí hình nền
+* background-repeat => Lặp hình nền
+* background-size: cover|contain|value|value1 value2
+* background-attachment => Cố định hình nền
+* background => Tổng hợp: color image position repeat attachment
