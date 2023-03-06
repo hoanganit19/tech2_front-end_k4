@@ -308,3 +308,87 @@ Lưu ý:
 * background-size: cover|contain|value|value1 value2
 * background-attachment => Cố định hình nền
 * background => Tổng hợp: color image position repeat attachment
+
+### Thuộc tính border
+
+- Thêm viền cho khối
+- Áp dụng cho cả thẻ block và inline
+
+Cú pháp: border: size style color
+
+- size: Độ dày của viền
+- style: kiểu (solid, dashed, dotted, double)
+
+Thuộc tính đầy đủ:
+
+- border-left: size style color
+- border-right: size style color
+- border-top: size style color
+- border-bottom: size style color
+- border-width: size
+- border-left-width: size
+- border-right-width: size
+- border-top-width: size
+- border-bottom-width: size
+- border-style: style
+- border-left-style: style
+- border-right-style: style
+- border-top-style: style
+- border-bottm-style: style
+- border-color: color
+- border-left-color: color
+- border-right-color: color
+- border-top-color: color
+- border-bottom-color: color
+
+### Thuộc tính border-radius
+
+- Bo góc khối
+- Cú pháp:
+
+* border-radius: size => Bo 4 góc
+* border-radius: size1 size2 (size = top left = bottom right, size2 = bottom left = top right)
+* border-radius: size1 size2 size3 (size1 = top left, size2 = bottom left = top right, size3 = bottom right)
+* border-radius: size1 size2 size3 size4 (size1 = top left, size2 = top right, size3 = bottom left, size4 = bottom right)
+* border-top-left-radius: size
+* border-top-right-radius: size
+* border-bottom-left-radius: size
+* border-bottom-right-radius: size
+
+Lưu ý: Nếu muốn tạo hình tròn
+
+- border-radius: 50% (hoặc 100%)
+- width = height
+
+### Thuộc tính padding và margin
+
+- Thuộc tính padding: Căn chỉnh khoảng cách giữa viền và nội dung (Khoảng cách bên trong)
+
+- Thuộc tính margin: Căn chỉnh ngoài khối (Căn lề)
+
+Cú pháp:
+
+- margin: value => 4 cạnh
+- margin: value1 value2 => value1 = top = bottom, value2 = left = right
+- margin: value1 value2 value3 => value1 = top, value2 = left = right, value3 = bottom
+- margin: value1 value2 value3 value4 => value1 = top, value2 = right, value3 = bottom, value4 = left
+
+Thuộc tính padding tương tự
+
+Lưu ý: Riêng thuộc tính margin => Có thêm giá trị auto
+
+### Thuộc tính width và height
+
+- Thiết lập chiều rộng và chiều cao
+- Chỉ áp dụng với thẻ block
+- Tìm hiểu 2 đơn vị mới: vh, vw
+- Nếu dùng đơn vị % => Tỷ lệ với parent gần nhất
+
+Thuộc tính liên quan
+
+- min-width
+- max-width
+- min-height
+- max-height
+
+### Box Model
