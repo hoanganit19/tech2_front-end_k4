@@ -392,3 +392,49 @@ Thuộc tính liên quan
 - max-height
 
 ### Box Model
+
+- Mô hình hộp trong CSS
+
+### Thuộc tính overflow
+
+- Xử lý khi nội dung bị tràn khung
+- Khung bị tràn khi nội dung bên trong 1 element lớn hơn kích thước của thành phần cha
+- Các hình thức xử lý
+
+* Ẩn phần bị tràn
+* Tạo thanh cuộn cho thành phần cha (scroll)
+
+Cú pháp:
+overflow: visible|hidden|auto|scroll
+
+- visible: Mặc định
+- hidden: Ẩn phần bị tràn
+- auto: Hiển thị thanh cuộn nếu bị tràn
+- scroll: Luôn hiển thị thanh cuộn (Kể cả không bị tràn)
+
+Các thuộc tính mở rộng
+
+- overflow-x
+- overflow-y
+
+### Thuộc tính opacity
+
+- Làm mờ tất cả nội dung được chọn
+- Bao gồm cả các thành phần con
+
+### Thuộc tính display
+
+- Thay đổi chế độ hiển thị của 1 element
+- Cú pháp: display: none|block|inline-block|inline....
+
+Ngoài ra: Thuộc tính display còn rất nhiều giá trị phức tạp
+
+- flex
+- grid
+- table
+- list-item
+
+BÀI TẬP VỀ NHÀ
+
+- Xây dựng menu dropdown
+- Tìm hiểu về thuộc tính position
