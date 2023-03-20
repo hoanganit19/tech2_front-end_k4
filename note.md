@@ -438,3 +438,20 @@ BÀI TẬP VỀ NHÀ
 
 - Xây dựng menu dropdown
 - Tìm hiểu về thuộc tính position
+
+### Thuộc tính float
+
+- Trôi 1 thành phần về bên trái hay bên phải của thành phần cha
+
+- Cú pháp: float: none|left|right
+
+### Thuộc tính clear
+
+- Khắc chế tự động trôi của thuộc tính float
+
+- Cú pháp: clear: left|right|both
+
+Nguyên tắc khi làm việc với float
+
+- Nên đặt trong 1 thẻ bọc
+- Clearfix thẻ bọc: overflow: auto, after + clear
