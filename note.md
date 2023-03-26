@@ -455,3 +455,33 @@ Nguyên tắc khi làm việc với float
 
 - Nên đặt trong 1 thẻ bọc
 - Clearfix thẻ bọc: overflow: auto, after + clear
+
+### Thuộc tính position
+
+- Thay đổi vị trí các thành phần trong trang web
+- Cú pháp: position: static|relative|absolute|fixed
+- Thuộc tính mở rộng
+
+* top => Cách top bao nhiêu?
+* left => Cách left bao nhiêu?
+* right => Cách right bao nhiêu?
+* bottom => Cách bottom bao nhiêu?
+* z-index => Xếp chồng các thành phần theo trục Z (Mắt nhìn thẳng vào màn hình) => Chỉ nhận số nguyên (âm và dương), mặc định = 0
+
+position relative => Không làm thay đổi bố cục ban đầu của layout
+
+position absolute =>
+
+- Làm thay đổi bố cục ban đầu của layout (sắp xếp lại)
+- Nhận body làm cha
+- Khắc phục tình trạng này bằng cách thêm thuộc tính position relative vào thành phần cha => Thành phần nào có postion absolute sẽ bám theo thành phần có relative
+
+position fixed
+
+- Cố định khi scrolling
+- Luôn nhận body làm cha
+
+Nguyên tắc xếp chồng
+
+- Thành phần html nằm sau => Luôn được chồng lên trước
+- Thành phần có postion (trừ static) => Được chồng lên trước
