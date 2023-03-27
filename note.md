@@ -485,3 +485,20 @@ Nguyên tắc xếp chồng
 
 - Thành phần html nằm sau => Luôn được chồng lên trước
 - Thành phần có postion (trừ static) => Được chồng lên trước
+
+### Bộ đếm trong CSS (Counter)
+
+- counter-reset => Tạo bộ đếm mới
+- counter-increment => Thực hiện đếm
+
+### flexbox
+
+- display: flex|inline-flex => Kích hoạt flex
+
+- flex-direction: Tùy chỉnh hướng (row|column|row-rereverse|column-reverse)
+
+- flex-wrap => Kích hoạt wrap hoặc không (nowrap|wrap|wrap-rereverse)
+
+- justify-content => Điều chỉnh các item theo trục chính (main axis) (flex-start|flex-end|center|space-between|space-around|space-evenly)
+
+- align-items => Điều chỉnh các item theo trục vuông góc (cross axis)
