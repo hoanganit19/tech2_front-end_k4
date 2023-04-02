@@ -493,6 +493,8 @@ Nguyên tắc xếp chồng
 
 ### flexbox
 
+#### Các thuộc tính trong nhóm Flex container
+
 - display: flex|inline-flex => Kích hoạt flex
 
 - flex-direction: Tùy chỉnh hướng (row|column|row-rereverse|column-reverse)
@@ -502,3 +504,19 @@ Nguyên tắc xếp chồng
 - justify-content => Điều chỉnh các item theo trục chính (main axis) (flex-start|flex-end|center|space-between|space-around|space-evenly)
 
 - align-items => Điều chỉnh các item theo trục vuông góc (cross axis)
+
+- align-content
+
+- gap: Tạo khoảng cách giữa các item
+
+* gap: value => Cả 4 góc
+* gap: value1 (hàng) value2 (cột)
+
+#### Các thuộc tính trong nhóm flex item
+
+- flex-grow: Tự động giãn để lấp đầy khoảng cách còn trống
+- flex-shrink: Tự động co lại khi tổng width các item > container
+- flex-basis: Thiết lập giá trị mặc định (width hoặc height)
+
+* Bị chặn đầu bởi min-width
+* Bị chặn cuối bởi max-width
