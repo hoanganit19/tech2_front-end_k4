@@ -520,3 +520,18 @@ Nguyên tắc xếp chồng
 
 * Bị chặn đầu bởi min-width
 * Bị chặn cuối bởi max-width
+
+Thuộc tính shadow
+
+- box-shadow:
+- text-shadow:
+
+Thuộc tính transition
+
+- Delay quá trình chuyển động của CSS
+- Chỉ làm delay được các giá trị số
+
+- transition-property: => Cần delay thuộc tính nào, mỗi thuộc cách nhau bởi dấu ,
+- transition-duration: => Thiết lập thời gian hoàn thành chuyển động (s, ms)
+- transition-timing-function: Thiết lập tốc độ
+- transition-delay: Độ trễ trước khi thực hiện transition
