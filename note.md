@@ -535,3 +535,12 @@ Thuộc tính transition
 - transition-duration: => Thiết lập thời gian hoàn thành chuyển động (s, ms)
 - transition-timing-function: Thiết lập tốc độ
 - transition-delay: Độ trễ trước khi thực hiện transition
+
+Thuộc tính transform
+
+- rotate(angle) => Xoay theo trục Z
+- rotateX(angle) => Xoay theo trục X
+- rotateY(angle) => Xoay theo trục Y
+- scale(x, y) => Phóng to theo trục X và Y
+- scaleX(x) => Phóng to theo trục X
+- scaleY(y) => Phóng to theo trục Y

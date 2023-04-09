@@ -24,6 +24,38 @@
     text-align: center;
     box-shadow: 0 0 5px 2px #cccccc8e;
     padding: 15px;
+    position: relative;
+    cursor: pointer;
+}
+
+.services .services-list .service-item::after{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgb(37, 37, 255);
+    transition: top 0.5s linear;
+}
+
+.services .services-list .service-item:hover::after{
+    top: 0;
+}
+
+.services .services-list .service-item:hover .service-item-inner{
+    color: #fff;
+}
+
+.services .services-list .service-item:hover .service-item-icon{
+    background: #fff;
+    border-color: transparent;
+}
+
+.services .services-list .service-item-inner{
+    position: relative;
+    z-index: 1;
+    transition: all 0.5s linear;
 }
 
 .services .service-item-icon{
@@ -36,6 +68,7 @@
     color: blue;
     text-align: center;
     line-height: 50px;
+    transition: all 0.6s linear;
 }
 
 .services h3{
