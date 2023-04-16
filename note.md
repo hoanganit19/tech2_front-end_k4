@@ -544,3 +544,37 @@ Thuộc tính transform
 - scale(x, y) => Phóng to theo trục X và Y
 - scaleX(x) => Phóng to theo trục X
 - scaleY(y) => Phóng to theo trục Y
+- skew(angleX, angleY) => Nghiêng theo trục X và Y
+- skewX(x) => Nghiêng theo trục X
+- skewY(y) => Nghiêng theo trục Y
+- translate(x, y) => Dịch chuyển theo trục X, Y
+- translateX(x) => Dịch chuyển theo trục X
+- translateY(y) => Dịch chuyển theo trục Y
+
+Sự khác nhau giữa translate và position relative
+
+1. translate
+
+- Nếu dùng đơn vị % => Tỷ lệ dựa vào size của đối tượng đang di chuyển
+
+2. position relative
+
+- Nếu dùng đơn vị % => Tỷ lệ dựa vào size của parent
+
+=> Nếu dùng đơn vị tuyệt đối => Giống nhau
+
+transform-origin: x y
+
+x nhận các giá trị
+
+- left
+- right
+- center
+- Các giá trị tuyệt đối, phần trăm
+
+y nhận các giá trị
+
+- top
+- center
+- bottom
+- Các giá trị tuyệt đối, phần trăm
