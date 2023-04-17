@@ -46,8 +46,8 @@ body{
 }
 
 .products .product-list .product-item{
-
-    --item-width: calc(100% / 4 - var(--column-space)); /*biến cục bộ*/
+    --number-column: 1;
+    --item-width: calc(100% / var(--number-column) - var(--column-space)); /*biến cục bộ*/
     
     flex-basis: var(--item-width);
     
@@ -144,4 +144,16 @@ body{
 
 .products .product-list .product-item:hover .product-item-action{
     display: flex;
+}
+
+@media all and (min-width: 768px){
+    .products .product-list .product-item{
+        --number-column: 2;
+    }
+}
+
+@media all and (min-width: 1200px){
+    .products .product-list .product-item{
+        --number-column: 4;
+    }
 }

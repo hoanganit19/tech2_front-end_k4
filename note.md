@@ -578,3 +578,104 @@ y nhận các giá trị
 - center
 - bottom
 - Các giá trị tuyệt đối, phần trăm
+
+## Background Gradient
+
+- Linear => Hướng từ cạnh
+- Radial => Hướng từ tâm
+
+* circle
+* ellipse
+
+Phân chia mỗi đoạn thành 1 màu
+Xác định được số lượng màu sẽ tồn tại trong background
+
+## Responsive
+
+- Dùng css để thay đổi kiểu hiển thị trên các màn hình khác nhau
+- Dựa vào kích thước màn hình để thay đổi
+- Dùng qua At-rules @media (Hay còn gọi là media query)
+
+### BreakPoint
+
+- Điểm chuyển màn hình khi làm việc với responsive
+- Ví dụ:
+
+0 -> 575 => Mobile
+576 -> 767 => Ipad
+769 -> 991 => Ipad Pro
+992 -> 1399 => Máy tính nhỏ
+1400 -> max => Máy tính lớn
+
+- Không có breakpoint cố định trong tất cả các dự án
+
+- Nên sử dụng các breakpoint phổ biến (Tham khảo các css framework)
+
+* 576
+* 768
+* 992
+* 1200
+* 1400
+
+### Các trường phái Responsive
+
+- Moible first
+
+* CSS mặc định sẽ là màn hình nhỏ nhất
+* Các phần responsive => sẽ là các màn hình lớn hơn
+
+- Desktop first
+
+* CSS mặc định sẽ là màn hình lớn nhất
+
+* Các phần responsive => sẽ là các màn hình nhỏ hơn
+
+### Media Query
+
+1. Mobile First
+
+@media all and (min-width: 576px){
+
+}
+
+@media all and (min-width: 768px){
+
+}
+
+@media all and (min-width: 992px){
+
+}
+
+@media all and (min-width: 1200px){
+
+}
+
+@media all and (min-width: 1400px){
+
+}
+
+2. Desktop First
+
+@media all and (max-width: 576px){
+
+}
+
+@media all and (max-width: 768px){
+
+}
+
+@media all and (max-width: 992px){
+
+}
+
+@media all and (max-width: 1200px){
+
+}
+
+Nguyên tắc khi làm việc với Responsive
+
+- Ẩn/Hiện sử dụng display none và block
+- Ghi đè: thêm !important phía sau giá trị của thuộc tính (display: block !important;)
+- Nên dùng đơn vị tương đối: %, em, rem,...
+
+Buổi sau: build grid system
