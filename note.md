@@ -679,3 +679,101 @@ Nguyên tắc khi làm việc với Responsive
 - Nên dùng đơn vị tương đối: %, em, rem,...
 
 Buổi sau: build grid system
+
+## Grid System
+
+Class: `col-{number}` => Áp dụng với màn hình nhỏ nhất
+
+- col-1
+- col-2
+- col-3
+- col-4
+- col-5
+- col-6
+- col-7
+- col-8
+- col-9
+- col-10
+- col-11
+- col-12
+
+Class: `col-{breakpoint}-{number}`
+
+{breakpoint}
+
+- sm => Small => >=576px
+- md => Medium => >=768px
+- lg => Large => >=992px
+- xl => Extra Large => 1200px
+- xxl => Extra extra Large => 1400px
+
+Công thức
+
+- Xác định được flex-basic và max-width
+- Công thức:
+
+* col-1 => 100 / 12
+* col-2 => `100 / 12 * 2`
+* col-3 => `100 / 12 * 3`
+
+=> col-{number} = `100 / 12 * {number}`
+
+## Chống chéo css và độ ưu tiên
+
+### Độ ưu trong CSS
+
+0. important
+
+1. Inline CSS
+
+2. ID
+
+3. Class
+
+4. Tagname
+
+### Phạm vi CSS
+
+1. Tagname
+
+2. Class
+
+3. ID
+
+4. Inline
+
+=> Phạm vi càng rộng => Độ ưu tiên càng thấp
+
+Lưu ý:
+
+- Không lạm dụng !important
+- Nên sử dụng các nguyên tắc ưu tiên
+
+* id, class, tagname, inline
+* Thứ tự viết code css (Code nằm dưới sẽ ưu tiên cao hơn)
+* Selector càng chi tiết => Độ ưu tiên sẽ cao hơn
+* Vị trí gọi file css sau => Ưu tiên cao hơn
+
+## Kế thừa trong CSS
+
+- Cách 1: Đặt nhiều class trong 1 element
+
+* Những thành phần giống nhau, xuất hiện nhiều => Đặt riêng ra 1 class
+* Những thành phần đặc biệt => Đặt thêm 1 class và css nó
+
+- Cách 2: Đặt nhiều selector vào 1 khối (Cách nhau bởi dấu ,)
+
+SCSS => Hỗ trợ mạnh về kế thừa
+
+@extends, @mixin, @includes, @placeholder,...
+
+## Quy tắc đặt tên BEM
+
+- Xem video: https://www.youtube.com/watch?v=iMEVI3GXhn4
+
+- Trang chủ: https://getbem.com
+
+Về nhà
+
+- Ôn lại bài học ngày hôm nay
+- Hoàn thiện dự án: Push lên git và gửi lại link qua group
