@@ -1,0 +1,23 @@
+.sales{
+    @include section-base();
+    .sales__item{
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .sales__multi-row{
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-between;
+        row-gap: 30px;
+        .sales__item{
+            height: calc(50% - 15px);
+            img{
+                height: 97%;
+            }
+        }
+    }
+}

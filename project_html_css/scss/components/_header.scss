@@ -1,0 +1,35 @@
+.header{
+    padding: 54px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    .header__logo{
+        img{
+            max-width: 266px;
+        }
+    }
+
+    .header__address{
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+        column-gap: 10px;
+    }
+
+    .header__menu{
+        padding: 25px 0;
+        ul{
+            display: flex;
+            column-gap: 50px;
+            li{
+                a{
+                    display: block;
+                    font-family: BebasNeue, sans-serif;
+                    font-size: 1.25rem;
+                }
+            }
+        }
+    }
+}

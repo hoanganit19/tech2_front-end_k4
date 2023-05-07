@@ -31,3 +31,15 @@ p{
 input, textarea, button{
     border: none;
 }
+
+ul, ol{
+    list-style: none;
+}
+
+.btn{
+    background: #bf2222;
+    color: #fff;
+    padding: 10px 30px;
+    font-family: "Alfa Slab One", sans-serif;
+    display: inline-block;
+}
