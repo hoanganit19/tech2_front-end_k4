@@ -777,3 +777,24 @@ Về nhà
 
 - Ôn lại bài học ngày hôm nay
 - Hoàn thiện dự án: Push lên git và gửi lại link qua group
+
+## Project PSD => HTML CSS
+
+- Bản thiết kế: PSD, AI, XD, Figma,...
+- Kỹ năng: Coding (html, css, javascript,...)
+- Sử dụng các phần mềm: Lấy tài nguyên (ảnh, text,...), đo đạc (kích thước, font chữ, cỡ chữ, màu sắc,...)
+- Học kỹ năng đo đạc và lấy tài nguyên của phần mềm
+- UX, UI
+- Luyện tập nhiều: Nâng cao phản xạ khi gặp phải giao diện, làm nhanh hơn
+- Kỹ năng phân tích giao diện tổng quan
+
+### Hướng dẫn sử dụng Photoshop
+
+- Bật thước: Ctrl + R
+- Chuyển đổi đơn vị: Ctrl + K => Unit & Ruler
+- Đo đạc: Sử dụng công cụ (M) kết với Info (Windows => Info)
+
+### Responsive khi Convert PSD => HTML CSS
+
+- Nếu bản thiết kế có giao diện mobile => Làm giống
+- Nếu bản thiết kế không có giao diện mobile => Tự nghĩ layout Responsive

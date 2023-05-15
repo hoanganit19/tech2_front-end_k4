@@ -20,10 +20,7 @@
 
     .products__list{
         margin-top: 30px;
-        .row{
-            margin-left: -40px;
-            margin-right: -40px;
-        }
+       
         
         .products--item{
           padding: 0 30px;
@@ -35,12 +32,19 @@
                 font-weight: bold;
                 font-size: 2.34rem;
             }
+            .btn{
+                @include transition;
+                &:hover{
+                    background: $secondaryColor;
+                }
+            }
           }
 
           .item__image{
             height: 312px;
             text-align: center;
             margin-bottom: 40px;
+            
            
             a{
                 height: 100%;
@@ -49,6 +53,13 @@
                 justify-content: center;
                 align-items: flex-end;
                 overflow: hidden;
+                img{
+                    @include transition;
+                    &:hover{
+                        transform: scale(1.05);
+                        opacity: 0.7;
+                    }
+                }
             }
             &::after{
                 content: '';
@@ -62,3 +73,5 @@
         }
     }
 }
+
+@import 'responsive/products';
