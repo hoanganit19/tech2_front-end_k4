@@ -798,3 +798,62 @@ Về nhà
 
 - Nếu bản thiết kế có giao diện mobile => Làm giống
 - Nếu bản thiết kế không có giao diện mobile => Tự nghĩ layout Responsive
+
+## Javascript
+
+### Chuỗi
+
+Bao gồm các ký tự, đặt trong dấu nháy đơn, nháy kép, template string (``)
+
+Để kiểm tra 1 chuỗi => Dùng từ khóa typeof tenbien === 'string'
+
+Ép kiểu: Chuyển từ kiểu dữ liệu này thành kiểu dữ liệu khác
+
+1. Primitive
+
+- Kiểu dữ liệu nguyên thủy: undefined, boolean, number, string, bigint, symbol
+- Cách gọi giống như object: tenbien.tenPhuongThuc() hoặc tenbien.tenthuoctinh
+
+2. Object
+
+- Kiểu dữ liệu đối tượng: object, array, function
+- Cách gọi: tenbien.tenPhuongThuc() hoặc tenbien.tenthuoctinh
+
+3. Function Constructor
+
+- Function đặc biệt
+- Dùng để tạo ra các object
+- Gọi function constructor dùng từ khóa news: `tenbien = new TenFuncion()`
+- Ví dụ: String, Array, Number,...
+
+4. Prototype
+
+- Xem danh sách các thuộc tính, phương thức của 1 function constructor (Được tạo bằng Prototype): `TenFunction.prototype`
+
+5. Xử lý chuỗi
+
+- Xử lý chuỗi cơ bản: Sử dụng các hàm có sẵn để thao tác với chuỗi
+
+- Xử lý chuỗi nâng cao:
+
+* Sử dụng các hàm
+* Giải thuật, thuật toán, tư duy logic
+* Sử dụng biểu thức chính quy (Regular Expression, Regex)
+
+- Các phương thức / thuộc tính xử lý chuỗi
+
+* length => Lấy độ dài của chuỗi
+* at(index) => Lấy ký tự dựa vào index (index bắt đầu từ 0)
+* charCodeAt(index) => Lấy ký tự dựa vào index => Chuyển mã ascii
+* concat(string) => Nối chuỗi
+* includes() => tìm kiểm chuỗi => Nếu tìm thấy trả về true, ngược lại trả về false
+* indexOf() => Tìm kiểm chuỗi đầu tiên => Tìm thấy trả về index, ngược lại trả về -1
+* lastIndexOf() => Tìm kiếm chuỗi cuối cùng => Tìm thấy trả về index, ngược lại trả về -1
+* match() => Cắt chuỗi dựa vào biểu thức chính quy
+* replace() => Thay thế chuỗi (Chuỗi cố định, Regex Pattern)
+* replaceAll() => Thay thế tất cả chuỗi tìm được
+* slice() => Cắt chuỗi con từ chuỗi cha dựa vào index
+* split() => Chuyển từ chuỗi thành mảng
+* toUpperCase() => Chuyển chữ thường thành chữ hoa
+* toLowerCase() => Chuyển chữ hoa thành chữ thường
+* trim() => Loại bỏ khoảng trắng đầu và cuối chuỗi
