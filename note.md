@@ -857,3 +857,44 @@ Bao gồm các ký tự, đặt trong dấu nháy đơn, nháy kép, template st
 * toUpperCase() => Chuyển chữ thường thành chữ hoa
 * toLowerCase() => Chuyển chữ hoa thành chữ thường
 * trim() => Loại bỏ khoảng trắng đầu và cuối chuỗi
+
+### Mảng (Array)
+
+1. Tổng quan:
+
+- Kiểu dữ liệu phức hợp: Tổng hợp các kiểu dữ liệu khác nhau vào trong 1 biến
+- Quy định bởi: index và element
+- Truy cập vào 1 phần tử của mảng: xác định được index
+
+2. Khai báo mảng
+
+`tenbien = []` hoặc `tenbien = new Array()`
+
+- Khai báo 1 mảng rỗng: `tenbien = []`
+
+- Khai báo mảng có dữ liệu: `tenbien = ["Value 1", "Value 2", "Value 3"]`
+
+3. Áp dụng các phương thức xử lý mảng
+
+- Thêm phần tử vào mảng
+- Sửa phần tử trong mảng
+- Xóa phần tử mảng
+- Duyệt mảng
+
+4. Các hàm xử lý mảng
+
+- Array.isArray() => Kiểm tra kiểu dữ liệu mảng
+- Array.from() => ép kiểu dữ liệu sang kiểu mảng
+- at(index) => lấy phần tử mảng theo index
+- concat(arr) => Nối nhiều mảng => Trả về 1 mảng
+- includes(value) => tìm phần tử mảng => tìm thấy trả về true
+- indexOf(value) => tìm phần tử đầu tiên => tìm thấy trả về index, không tìm thấy trả về -1
+- lastIndexOf(value) => tìm phần tử cuối cùng => tìm thấy trả về index, không tìm thấy trả về -1
+- join() => Nối các phần tử của mảng thành chuỗi
+- slice(start, end) => Tách mảng con từ mảng cha dựa vào index (start tính từ 0, end tính từ 1)
+- push() => Thêm phần tử vào cuối mảng và trả về số lượng sau khi thêm
+- unshift() => Thêm phần tử vào đầu mảng và trả về số lượng sau khi thêm
+- pop() => Xóa phần tử cuối cùng của mảng và trả về phần tử vừa xóa
+- shift() => Xóa phần tử đầu tiên của mảng và trả về phần tử vừa xóa
+- sort() => Sắp xếp theo thứ tự tăng dần (Trả về true, false)
+- reverse() => Đảo ngược mảng
