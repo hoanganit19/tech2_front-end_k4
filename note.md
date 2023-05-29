@@ -898,3 +898,31 @@ Bao gồm các ký tự, đặt trong dấu nháy đơn, nháy kép, template st
 - shift() => Xóa phần tử đầu tiên của mảng và trả về phần tử vừa xóa
 - sort() => Sắp xếp theo thứ tự tăng dần (Trả về true, false)
 - reverse() => Đảo ngược mảng
+
+### Đối tượng (Object)
+
+1. Object nguyên bản
+
+var tenDoiTuong = {}
+
+hoặc
+
+var tenDoiTuong = new Object();
+
+Thêm thuộc tính cho object (giống như biến)
+
+=> Value không phải là function => Gọi là thuộc tính
+
+Thêm phương thức cho object (giống như hàm)
+
+=> Value là function => gọi là phương thức
+
+Gọi key trong Object
+
+tenObject.tenkey
+
+Nếu key là thuộc tính => tenObject.key
+
+Nếu key là phương thức => tenObject.key()
+
+Để khắc phục tình trạng tham chiếu trong Array, Object => Clone object, array
