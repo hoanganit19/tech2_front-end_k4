@@ -926,3 +926,45 @@ Nếu key là thuộc tính => tenObject.key
 Nếu key là phương thức => tenObject.key()
 
 Để khắc phục tình trạng tham chiếu trong Array, Object => Clone object, array
+
+2. Function Constructor
+
+3. Các dạng object hay dùng
+
+- Mảng lồng object
+- Object lồng mảng
+- Object lồng object
+
+### DOM
+
+1. Event
+
+- Mỗi thẻ html sẽ có các sự kiện khác nhau
+- Nhớ sự kiện hay dùng
+- 3 cách thêm sự kiện cho thẻ html
+
+* Cách 1: Thêm bằng thuộc tính html (tên sự kiện)
+* Cách 2: Thêm bằng DOM (Dom Event)
+* Cách 3: Thêm thông qua phương thức addEventListener()
+
+=> Cách 2 và cách 3 phải tạo đối tượng html (DOM Element)
+
+2. Dom Element
+
+document.querySelector, document.querySelectorAll sẽ được dùng nhiều
+
+- Hỗ trợ CSS Selector => Linh hoạt hơn
+- Hỗ trợ việc phân cấp (Kế thừa tất cả mọi thứ trong CSS Selector)
+
+Cách kiểm tra element
+
+- Nếu là số ít: document.querySelector, document.getElementById => Kiểm tra !== null
+
+- Nếu là số nhiều: Kiểm tra length > 0
+
+3. Dom HTML
+
+3.1. Làm việc với nội dung thẻ html
+
+- Lấy nội dung
+- Thay thế nội dung
