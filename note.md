@@ -968,3 +968,7 @@ Cách kiểm tra element
 
 - Lấy nội dung
 - Thay thế nội dung
+
+Có các thuộc tính: innerText, innerHTML, outerText, outerHTML
+
+3.2. Làm việc với thuộc tính

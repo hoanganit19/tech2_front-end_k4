@@ -1,5 +1,6 @@
 var btn = document.querySelector(".btn");
 var content = document.querySelector(".content");
+var result = document.querySelector(".result");
 
 btn.addEventListener("click", function () {
   var contentText = content.innerHTML;
@@ -10,6 +11,10 @@ btn.addEventListener("click", function () {
   //   var bold = content.querySelector("b");
   //   var boldHtml = bold.outerHTML; //lấy cả html (outerHTML và outerText)
   //   console.log(boldHtml);
+
+  result.innerHTML = contentText;
+
+  content.innerText = ``;
 });
 
 //Bài tập: click vào button => di chuyển nội từ div content => div result
