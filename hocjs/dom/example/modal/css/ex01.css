@@ -8,13 +8,14 @@
     max-width: 600px;
     margin: 0 auto;
     position: fixed;
-    top: 5%;
+    top: -100%;
     left: 0;
     right: 0;
     z-index: 1000;
     background: #fff;
     border: 1px solid #efefef;
-    display: none;
+    transition: all 0.4s linear;
+    opacity: 0;
 }
 
 .modal .modal__header{
@@ -47,14 +48,22 @@
 .modal-wrapper::after{
     content: '';
     position: fixed;
-    top: 0;
+    top: -100%;
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom: 100%;
     background: #00000070;
-    display: none;
+    transition: all 0.4s linear;
+    opacity: 0;
 }
 
-.modal-wrapper.open .modal, .modal-wrapper.open::after{
-    display: block;
+.modal-wrapper.open .modal{
+    top: 5%;
+    opacity: 1;
+}
+
+.modal-wrapper.open::after{
+    top: 0;
+    bottom: 0;
+    opacity: 1;
 }
