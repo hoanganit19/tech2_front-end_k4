@@ -1,4 +1,8 @@
-var audio = document.querySelector("audio");
+// var audio = document.querySelector("audio");
+
+var audio = new Audio('yeu-voi-vang-remix.mp3');
+
+var songName = 'Yêu vội vàng remix';
 
 var player = document.querySelector(".player");
 
@@ -11,6 +15,8 @@ var currentEl = player.querySelector(".current");
 var timer = player.querySelector(".timer input");
 
 var volume = player.querySelector(".volume");
+
+var playerImage = player.querySelector('.player__image');
 
 var playBtn = `<i class="fa-solid fa-play fa-2x"></i>`;
 
@@ -31,19 +37,40 @@ var getTime = function (second) {
   }`;
 };
 
+//Custom Event
+var playingEvent;
+
+var pauseEvent = new CustomEvent('pause');
+
 playerAction.addEventListener("click", function () {
+
+  if (audio.networkState!==1){
+    alert('Đã có lỗi không thể phát nhạc');
+    return;
+  }
+
   if (audio.paused) {
     audio.play();
     this.innerHTML = pauseBtn;
+    player.dispatchEvent(playingEvent)
   } else {
     audio.pause();
     this.innerHTML = playBtn;
+
+    player.dispatchEvent(pauseEvent);
   }
 });
 
 audio.addEventListener("loadeddata", function () {
   duration = audio.duration;
   durationEl.innerHTML = getTime(duration);
+
+  playingEvent = new CustomEvent('playing', {
+    detail: {
+      name: songName,
+      duration: audio.duration
+    }
+  });
 });
 
 audio.addEventListener("timeupdate", function () {
@@ -100,3 +127,21 @@ volume.previousElementSibling.addEventListener("click", function () {
     volume.nextElementSibling.innerHTML = `100%`;
   }
 });
+
+//tự xây dựng 1 event tên: playing
+var content = document.querySelector('.content');
+player.addEventListener('playing', function(e){
+  console.log(e);
+  playerImage.classList.add('playing');
+  content.style.color = 'red';
+})
+
+player.addEventListener('pause', function(){
+  playerImage.classList.add('speedup');
+
+  setTimeout(function(){
+    playerImage.classList.remove('playing', 'speedup');
+  }, 500);
+
+  content.style.color = 'initial';
+})
