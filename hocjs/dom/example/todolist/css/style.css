@@ -44,3 +44,8 @@
     color: gray;
     font-style: italic;
 }
+
+.todos .todos__inner{
+    max-height: 400px;
+    overflow-y: auto;
+}
