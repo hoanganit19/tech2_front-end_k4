@@ -18,6 +18,8 @@ var volume = player.querySelector(".volume");
 
 var playerImage = player.querySelector('.player__image');
 
+var previewTimer = timer.nextElementSibling;
+
 var playBtn = `<i class="fa-solid fa-play fa-2x"></i>`;
 
 var pauseBtn = `<i class="fa-solid fa-pause fa-2x"></i>`;
@@ -127,6 +129,29 @@ volume.previousElementSibling.addEventListener("click", function () {
     volume.nextElementSibling.innerHTML = `100%`;
   }
 });
+
+audio.addEventListener('ended', function(){
+  console.log('Kết thúc');
+  playerAction.innerHTML = playBtn;
+  timer.value = 0;
+  player.dispatchEvent(pauseEvent);
+})
+
+var getCurrentTimeOver = function(offsetX){
+  var timerWidth = timer.clientWidth;
+  var currentTime = offsetX / timerWidth * duration;
+  return getTime(currentTime);
+}
+
+timer.addEventListener('mousemove', function(e){
+  previewTimer.classList.add('open');
+  previewTimer.style.left = `${e.offsetX}px`;
+  previewTimer.innerText = getCurrentTimeOver(e.offsetX);
+});
+
+timer.addEventListener('mouseout', function(){
+  previewTimer.classList.remove('open');
+})
 
 //tự xây dựng 1 event tên: playing
 var content = document.querySelector('.content');

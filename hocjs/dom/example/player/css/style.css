@@ -37,3 +37,21 @@
     border-radius: 50%;
     animation: playing 0.5s linear infinite both;
 }
+
+.player .timer{
+    position: relative;
+}
+
+.player .timer span{
+    position: absolute;
+    background: #333;
+    color: #fff;
+    font-size: 0.8rem;
+    left: 0;
+    top: -15px;
+    display: none;
+}
+
+.player .timer span.open{
+    display: block;
+}
