@@ -5,6 +5,10 @@
     outline: none;
 }
 
+html {
+    scroll-behavior: smooth;
+  }
+
 body{
     height: 2000px;
 }
@@ -48,4 +52,8 @@ ul, ol{
     display: block;
     color: #fff;
     padding: 10px 30px;
+}
+
+main section{
+    height: 100vh;
 }
