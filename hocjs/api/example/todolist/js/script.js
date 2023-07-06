@@ -10,19 +10,16 @@ var filterActive = todoFilters.children[2];
 
 var limit = 3;
 var limitTotal = limit;
+var initialLoadMoreText;
+var currentStatus = "all";
 
-var render = function (todos, status = "all", options) {
-  var completedCount = 0;
-  var activeCount = 0;
+var render = function (todos, options) {
+  // var completedCount = 0;
+  // var activeCount = 0;
 
   if (todos.length) {
     todoInner.innerText = "";
     todos.forEach(function (todo) {
-      if (todo.is_completed) {
-        completedCount++;
-      } else {
-        activeCount++;
-      }
       //Thẻ div
       var div = document.createElement("div");
       div.classList.add("todos--item");
@@ -70,18 +67,22 @@ var render = function (todos, status = "all", options) {
 
   if (limitTotal >= options.total) {
     todoLoadmore.setAttribute("disabled", "disabled");
+  } else {
+    todoLoadmore.removeAttribute("disabled");
   }
 
   //Đếm số lượng công việc
-  if (status === "all") {
-    filterAll.children[0].innerText = options.total;
-    filterCompleted.children[0].innerText = completedCount;
-    filterActive.children[0].innerText = activeCount;
-  }
+  // if (status === "all") {
+  //   filterAll.children[0].innerText = options.total;
+  //   filterCompleted.children[0].innerText = completedCount;
+  //   filterActive.children[0].innerText = activeCount;
+  // }
 };
 
-var getTodos = async function (status = "all") {
-  todoInner.innerText = `Đang tải...`;
+var getTodos = async function (status = "all", isLoading = false) {
+  if (isLoading) {
+    todoInner.innerText = `Đang tải...`;
+  }
 
   var query = {
     _sort: "is_completed",
@@ -101,10 +102,51 @@ var getTodos = async function (status = "all") {
 
   if (response.ok) {
     var todos = await response.json();
-    render(todos, status, {
+
+    currentStatus = status;
+
+    render(todos, {
       total: response.headers.get("x-total-count"),
     });
+
+    getTodoCount("all");
+    getTodoCount("completed");
+    getTodoCount("active");
   }
+};
+
+var getTodoCount = async function (status = "all") {
+  var query = {};
+
+  if (status === "completed" || status === "active") {
+    query.is_completed = status === "completed" ? true : false;
+  }
+
+  query = new URLSearchParams(query).toString();
+
+  var response = await fetch(
+    `${serverApi}/todos${query ? "?" + query : query}`,
+  );
+
+  if (response.ok) {
+    const todos = await response.json();
+
+    if (status === "all") {
+      filterAll.children[0].innerText = todos.length;
+    }
+
+    if (status === "completed") {
+      filterCompleted.children[0].innerText = todos.length;
+    }
+
+    if (status === "active") {
+      filterActive.children[0].innerText = todos.length;
+    }
+  }
+};
+
+var resetLimitTotal = function () {
+  limitTotal = limit;
 };
 
 var addTodo = async function (todo) {
@@ -128,7 +170,7 @@ var removeTodo = async function (id) {
     method: "DELETE",
   });
   if (response.ok) {
-    getTodos(); //re-render
+    getTodos(currentStatus); //re-render
   } else {
     alert("Đã có lỗi xảy ra. Vui lòng thử lại sau");
   }
@@ -146,22 +188,30 @@ var markCompleted = async function (id, status) {
   });
 
   if (response.ok) {
-    getTodos();
+    getTodos(currentStatus);
   }
 };
 
-getTodos();
-
 filterAll.addEventListener("click", function () {
-  getTodos();
+  resetLimitTotal();
+  getTodos("all", true);
 });
 
 filterCompleted.addEventListener("click", function () {
-  getTodos("completed");
+  resetLimitTotal();
+  getTodos("completed", true);
 });
 
 filterActive.addEventListener("click", function () {
-  getTodos("active");
+  resetLimitTotal();
+  getTodos("active", true);
+});
+
+Array.from(todoFilters.children).forEach(function (filter) {
+  filter.addEventListener("click", function () {
+    todoFilters.querySelector("button.active").classList.remove("active");
+    filter.classList.add("active");
+  });
 });
 
 todoForm.addEventListener("submit", function (e) {
@@ -181,12 +231,17 @@ todoForm.addEventListener("submit", function (e) {
   doNameEl.value = "";
 });
 
-todoLoadmore.addEventListener("click", function (e) {
+todoLoadmore.addEventListener("click", async function (e) {
   //mặc định _limit = 3
   //Khi click vào xem thêm => _limit = 6
   //Khi click vào xem thêm lần nữa => _limit = 9
+
+  e.target.innerText = `Đang tải...`;
+
   limitTotal += limit;
-  getTodos();
+  await getTodos(currentStatus);
+
+  e.target.innerText = initialLoadMoreText;
 });
 
 var handleRemove = function (id) {
@@ -199,3 +254,11 @@ var handleRemove = function (id) {
 var handleMarkCompleted = function (id, isCompleted) {
   markCompleted(id, !isCompleted);
 };
+
+document.addEventListener("DOMContentLoaded", function () {
+  getTodos("all", true);
+
+  initialLoadMoreText = todoLoadmore.innerText;
+
+  todoFilters.children[0].classList.add("active");
+});
