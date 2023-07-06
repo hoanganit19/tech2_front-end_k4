@@ -18,3 +18,21 @@ Cần phải có
 * XMLHttpRequest
 * fetch
 * Thư viện: axois, jquery ajax,...
+
+## Authentication - Authorization
+
+- Authentication: Xác thực
+
+* Đăng ký
+* Đăng nhập
+  => Cần phải có Back-End
+
+Bên Client gửi Request lên Server (Email, Password) => Server xác thực => Token => Client sẽ lưu Token lại (Cookie, localStorage,...)
+
+- Authorization: Phân quyền
+
+Client sẽ gửi Request lên Server (Header chứa token) => Server kiểm tra xem token có hợp lệ không? Nếu hợp lệ trả về thông tin
+
+- Cho phép được làm gì
+
+Ví dụ: Muốn xem danh sách sản phẩm => Cần phải đăng nhập
